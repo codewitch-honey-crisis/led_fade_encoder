@@ -7,7 +7,7 @@ using namespace arduino;
 
 static int_encoder<ENCODER_DAT,ENCODER_CLK,true> knob;
 static unsigned long long knob_old_pos=0;
-static unsigned unsigned char led_value=0;
+static unsigned char led_value=0;
 void setup() {
   Serial.begin(115200);
   knob.initialize();
