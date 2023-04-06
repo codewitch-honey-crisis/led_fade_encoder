@@ -29,4 +29,5 @@ void loop() {
       ledcWrite(0,led_value);
     }
   }
+  knob_old_pos = pos;
 }
