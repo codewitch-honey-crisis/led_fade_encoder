@@ -1,13 +1,13 @@
 #include <Arduino.h>
 #include <encoder.hpp>
 using namespace arduino;
-#define ENCODER_DAT 1
-#define ENCODER_CLK 2 
-#define LED_PWM 3
+#define ENCODER_DAT 13
+#define ENCODER_CLK 14
+#define LED_PWM 12
 
 static int_encoder<ENCODER_DAT,ENCODER_CLK,true> knob;
-static unsigned long long knob_old_pos;
-static unsigned unsigned char led_value;
+static unsigned long long knob_old_pos=0;
+static unsigned unsigned char led_value=0;
 void setup() {
   Serial.begin(115200);
   knob.initialize();
